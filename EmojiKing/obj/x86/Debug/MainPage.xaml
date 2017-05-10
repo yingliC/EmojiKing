@@ -8,34 +8,54 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <SplitView x:ConnectionId='1'  Name="MySplitView"
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Popup x:ConnectionId='1' Grid.RowSpan="2" Name="NotifyPopup" IsOpen="False" IsLightDismissEnabled="True"/>
+        <StackPanel Orientation="Horizontal">
+            <Button x:ConnectionId='6' Name="HumburgerButton" FontFamily="Segoe MDL2 Assets" 
+                                    FontSize="25" Background="#CC000000" Foreground="White"  Content="&#xE700;" 
+                                                                 />
+            <Button x:ConnectionId='7' Name="BackButton" Visibility="Collapsed" FontFamily="Segoe MDL2 Assets" FontSize="25"  Content="&#xE830;"                         />
+            <TextBlock></TextBlock>
+        </StackPanel>
+        <SplitView x:ConnectionId='2'  Name="MySplitView"
                     DisplayMode="CompactOverlay" 
                    CompactPaneLength="45" 
-                   OpenPaneLength="150" 
-                   Background="Black">
+                   OpenPaneLength="150" Grid.Row="1">
             <SplitView.Pane>
                 <Grid>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="*"/>
                         <RowDefinition Height="auto"/>
                     </Grid.RowDefinitions>
-                    <ListView x:ConnectionId='2' Grid.Row="0" Name="MainListView" Background="#CC060505"                                                 >
-                        <ListViewItem  >
-                            <Button x:ConnectionId='4' Name="HumburgerButton" FontFamily="Segoe MDL2 Assets" 
-                                    FontSize="25" Foreground="White"  Content="&#xE700;" Margin="-10,0,0,0"
-                                                                 />
-                        </ListViewItem>
+                    <ListView x:ConnectionId='3' Grid.Row="0" Name="MainListView" Background="#CC000000"
+                                                                              >
                         <ListViewItem  Tag="MainPage">
                             <StackPanel Orientation="Horizontal">
+                                <TextBlock FontFamily="Segoe MDL2 Assets" FontSize="25" Foreground="White" Text="&#xE80F;"/>
+                                <TextBlock Margin="15,0,0,0" Text="主页" Foreground="White" VerticalAlignment="Center"/>
+                            </StackPanel>
+                        </ListViewItem>
+                        <ListViewItem Tag="EmotionPage">
+                            <StackPanel Orientation="Horizontal">
                                 <TextBlock FontFamily="Segoe MDL2 Assets" FontSize="25" Foreground="White" Text="&#xE899;"/>
-                                <TextBlock Margin="15,0,0,0" Text="设置" Foreground="White" VerticalAlignment="Center"/>
+                                <TextBlock Margin="15,0,0,0" Text="小情绪" Foreground="White" VerticalAlignment="Center"/>
+                            </StackPanel>
+                        </ListViewItem>
+                        <ListViewItem Tag="PKEmojiPage">
+                            <StackPanel Orientation="Horizontal">
+                                <Image Source="/Assets/Pics/PK.png" Height="27" Margin="-1,0,0,0"/>
+                                <TextBlock Margin="15,0,0,0" Text="PK表情包" Foreground="White" VerticalAlignment="Center"/>
                             </StackPanel>
                         </ListViewItem>
                     </ListView>
-                    <ListView x:ConnectionId='3' Grid.Row="1"
+                    <ListView x:ConnectionId='4' Grid.Row="1"
                               Name="SubListView" 
-                              Background="#CC000000" >
-                        <ListViewItem>
+                                                                             
+                              Background="#BF000000" >
+                        <ListViewItem Tag="Settings">
                             <ListViewItem.Content>
                                 <StackPanel Orientation="Horizontal">
                                     <TextBlock FontFamily="Segoe MDL2 Assets" FontSize="25" Text="&#xE713;" Foreground="White"/>
@@ -43,7 +63,7 @@
                                 </StackPanel>
                             </ListViewItem.Content>
                         </ListViewItem>
-                        <ListViewItem>
+                        <ListViewItem Tag="About">
                             <ListViewItem.Content>
                                 <StackPanel Orientation="Horizontal">
                                     <TextBlock FontFamily="Segoe MDL2 Assets" FontSize="25" Text="&#xE783;" Foreground="White"/>

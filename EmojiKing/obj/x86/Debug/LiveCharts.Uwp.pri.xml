@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<PriInfo>
+	<ResourceMap name="LiveCharts.Uwp" version="1.0" primary="true">
+		<Qualifiers/>
+		<ResourceMapSubtree name="Files">
+			<ResourceMapSubtree name="LiveCharts.Uwp">
+				<NamedResource name="DefaultGeoMapTooltip.xaml" uri="ms-resource://LiveCharts.Uwp/Files/LiveCharts.Uwp/DefaultGeoMapTooltip.xaml">
+					<Candidate type="Path">
+						<Value>LiveCharts.Uwp\DefaultGeoMapTooltip.xaml</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="DefaultGeoMapTooltip.xbf" uri="ms-resource://LiveCharts.Uwp/Files/LiveCharts.Uwp/DefaultGeoMapTooltip.xbf">
+					<Candidate type="EmbeddedData">
+						<Base64Value>[Embedded Binary Data]</Base64Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="DefaultLegend.xaml" uri="ms-resource://LiveCharts.Uwp/Files/LiveCharts.Uwp/DefaultLegend.xaml">
+					<Candidate type="Path">
+						<Value>LiveCharts.Uwp\DefaultLegend.xaml</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="DefaultLegend.xbf" uri="ms-resource://LiveCharts.Uwp/Files/LiveCharts.Uwp/DefaultLegend.xbf">
+					<Candidate type="EmbeddedData">
+						<Base64Value>[Embedded Binary Data]</Base64Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="DefaultTooltip.xaml" uri="ms-resource://LiveCharts.Uwp/Files/LiveCharts.Uwp/DefaultTooltip.xaml">
+					<Candidate type="Path">
+						<Value>LiveCharts.Uwp\DefaultTooltip.xaml</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="DefaultTooltip.xbf" uri="ms-resource://LiveCharts.Uwp/Files/LiveCharts.Uwp/DefaultTooltip.xbf">
+					<Candidate type="EmbeddedData">
+						<Base64Value>[Embedded Binary Data]</Base64Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="HeatColorRange.xaml" uri="ms-resource://LiveCharts.Uwp/Files/LiveCharts.Uwp/HeatColorRange.xaml">
+					<Candidate type="Path">
+						<Value>LiveCharts.Uwp\HeatColorRange.xaml</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="HeatColorRange.xbf" uri="ms-resource://LiveCharts.Uwp/Files/LiveCharts.Uwp/HeatColorRange.xbf">
+					<Candidate type="EmbeddedData">
+						<Base64Value>[Embedded Binary Data]</Base64Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="LiveCharts.Uwp.xr.xml" uri="ms-resource://LiveCharts.Uwp/Files/LiveCharts.Uwp/LiveCharts.Uwp.xr.xml">
+					<Candidate type="Path">
+						<Value>LiveCharts.Uwp\LiveCharts.Uwp.xr.xml</Value>
+					</Candidate>
+				</NamedResource>
+			</ResourceMapSubtree>
+		</ResourceMapSubtree>
+	</ResourceMap>
+</PriInfo>

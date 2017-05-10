@@ -8,8 +8,7 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <Button Content="Button" HorizontalAlignment="Left" Margin="116,217,0,0" VerticalAlignment="Top"/>
-
+        <TextBlock FontSize="24">· Welcome to Emoji King</TextBlock>
     </Grid>
 </Page>
 

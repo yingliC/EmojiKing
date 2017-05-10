@@ -25,6 +25,7 @@ namespace EmojiKing
         public MainPage()
         {
             this.InitializeComponent();
+            MainFrame.Navigate(typeof(HomePage));
         }
 
         private void MainListView_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -32,6 +33,8 @@ namespace EmojiKing
             switch ((e.AddedItems[0] as ListViewItem).Tag.ToString())
             {
                 case "MainPage": { MainFrame.Navigate(typeof(HomePage)); break; }
+                case "EmotionPage": { MainFrame.Navigate(typeof(EmotionPage)); break; }
+                case "PKEmojiPage": { MainFrame.Navigate(typeof(PKEmojiPage)); break; }
                 default:
                     break;
             }
@@ -40,6 +43,33 @@ namespace EmojiKing
         private void HumburgerButton_Click(object sender, RoutedEventArgs e)
         {
             MySplitView.IsPaneOpen = !MySplitView.IsPaneOpen;
+        }
+        private void SubListView_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            switch ((e.AddedItems[0] as ListViewItem).Tag.ToString())
+            {
+                case "Settings": { MainFrame.Navigate(typeof(SettingsPage)); break; }
+                case "About": { MainFrame.Navigate(typeof(AboutPage)); break; }
+                default:
+                    break;
+            }
+        }
+
+        private void BackButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (MainFrame.CanGoBack)
+            {
+                MainFrame.GoBack();
+            }
+            else
+            {
+
+            }
+        }
+
+        public void ShowNotify(string message)
+        {
+            NotifyPopup.IsOpen = true;
         }
     }
 }

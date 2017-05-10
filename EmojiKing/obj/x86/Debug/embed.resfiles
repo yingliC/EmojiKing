@@ -1,3 +1,11 @@
 App.xbf
 MainPage.xbf
+Styles\APPStyle.xbf
+Styles\StyleDictionary.xbf
+View\AboutPage.xbf
+View\EmotionDataPage.xbf
+View\EmotionPage.xbf
 View\HomePage.xbf
+View\NotifyPopup.xbf
+View\PKEmojiPage.xbf
+View\SettingsPage.xbf
