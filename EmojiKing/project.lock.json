@@ -25736,10 +25736,10 @@
   },
   "project": {
     "restore": {
-      "projectUniqueName": "C:\\Users\\maomao\\Documents\\Visual Studio 2017\\Projects\\EmojiKing\\EmojiKing\\EmojiKing.csproj",
+      "projectUniqueName": "C:\\Users\\maomao\\documents\\visual studio 2017\\Projects\\EmojiKing\\EmojiKing\\EmojiKing.csproj",
       "projectName": "EmojiKing",
-      "projectPath": "C:\\Users\\maomao\\Documents\\Visual Studio 2017\\Projects\\EmojiKing\\EmojiKing\\EmojiKing.csproj",
-      "projectJsonPath": "C:\\Users\\maomao\\Documents\\Visual Studio 2017\\Projects\\EmojiKing\\EmojiKing\\project.json",
+      "projectPath": "C:\\Users\\maomao\\documents\\visual studio 2017\\Projects\\EmojiKing\\EmojiKing\\EmojiKing.csproj",
+      "projectJsonPath": "C:\\Users\\maomao\\documents\\visual studio 2017\\Projects\\EmojiKing\\EmojiKing\\project.json",
       "projectStyle": "ProjectJson"
     },
     "dependencies": {
