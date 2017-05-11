@@ -1,1 +1,1 @@
-C:\Users\maomao\documents\visual studio 2017\Projects\EmojiKing\EmojiKing\EmojiKing.csproj;x86
+C:\Users\maomao\Documents\Visual Studio 2017\Projects\EmojiKing\EmojiKing\EmojiKing.csproj;x86
