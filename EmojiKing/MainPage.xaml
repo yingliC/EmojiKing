@@ -8,6 +8,37 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup>
+                <VisualState>
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="0" />
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="MySplitView.DisplayMode" Value="OverLay"></Setter>
+                        <Setter Target="MySplitView.OpenPaneLength" Value="128"></Setter>
+                    </VisualState.Setters>
+                </VisualState>
+                <VisualState>
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="600" />
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="MySplitView.DisplayMode" Value="CompactOverlay"></Setter>
+                        <Setter Target="MySplitView.OpenPaneLength" Value="192"></Setter>
+                    </VisualState.Setters>
+                </VisualState>
+                <VisualState>
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="800" />
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="MySplitView.DisplayMode" Value="CompactInline"></Setter>
+                        <Setter Target="MySplitView.OpenPaneLength" Value="256"></Setter>
+                    </VisualState.Setters>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"/>
             <RowDefinition Height="*"/>
@@ -20,10 +51,7 @@
             <Button Name="BackButton" Visibility="Collapsed" FontFamily="Segoe MDL2 Assets" FontSize="25"  Content="&#xE830;" Click="BackButton_Click"/>
             <TextBlock></TextBlock>
         </StackPanel>
-        <SplitView  Name="MySplitView"
-                    DisplayMode="CompactOverlay" 
-                   CompactPaneLength="45" 
-                   OpenPaneLength="150" Grid.Row="1">
+        <SplitView  Name="MySplitView" CompactPaneLength="45" Grid.Row="1">
             <SplitView.Pane>
                 <Grid>
                     <Grid.RowDefinitions>
@@ -51,7 +79,7 @@
                             </StackPanel>
                         </ListViewItem>
                     </ListView>
-                    <ListView Grid.Row="1"
+                    <ListView Grid.Row="1" SelectionMode="None"
                               Name="SubListView" 
                               SelectionChanged="SubListView_SelectionChanged"
                               Background="#BF000000" >
