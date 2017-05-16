@@ -25,16 +25,15 @@ namespace EmojiKing
         public MainPage()
         {
             this.InitializeComponent();
-            MainFrame.Navigate(typeof(HomePage));
+            MainFrame.Navigate(typeof(EmotionPage));
         }
 
         private void MainListView_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             switch ((e.AddedItems[0] as ListViewItem).Tag.ToString())
             {
-                case "MainPage": { MainFrame.Navigate(typeof(HomePage)); break; }
                 case "EmotionPage": { MainFrame.Navigate(typeof(EmotionPage)); break; }
-                case "PKEmojiPage": { MainFrame.Navigate(typeof(PKEmojiPage)); break; }
+                case "FaceStickersPage": { MainFrame.Navigate(typeof(FaceStickersPage)); break; }
                 default:
                     break;
             }

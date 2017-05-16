@@ -60,22 +60,16 @@
                     </Grid.RowDefinitions>
                     <ListView Grid.Row="0" Name="MainListView" Background="#CC000000"
                               SelectionChanged="MainListView_SelectionChanged">
-                        <ListViewItem  Tag="MainPage">
-                            <StackPanel Orientation="Horizontal">
-                                <TextBlock FontFamily="Segoe MDL2 Assets" FontSize="25" Foreground="White" Text="&#xE80F;"/>
-                                <TextBlock Margin="15,0,0,0" Text="主页" Foreground="White" VerticalAlignment="Center"/>
-                            </StackPanel>
-                        </ListViewItem>
                         <ListViewItem Tag="EmotionPage">
                             <StackPanel Orientation="Horizontal">
-                                <TextBlock FontFamily="Segoe MDL2 Assets" FontSize="25" Foreground="White" Text="&#xE899;"/>
+                                <TextBlock FontFamily="Segoe MDL2 Assets" FontSize="25" Foreground="White" Text="&#xE76E;"/>
                                 <TextBlock Margin="15,0,0,0" Text="小情绪" Foreground="White" VerticalAlignment="Center"/>
                             </StackPanel>
                         </ListViewItem>
-                        <ListViewItem Tag="PKEmojiPage">
+                        <ListViewItem Tag="FaceStickersPage">
                             <StackPanel Orientation="Horizontal">
-                                <Image Source="/Assets/Pics/PK.png" Height="27" Margin="-1,0,0,0"/>
-                                <TextBlock Margin="15,0,0,0" Text="PK表情包" Foreground="White" VerticalAlignment="Center"/>
+                                <TextBlock FontFamily="Segoe MDL2 Assets" FontSize="25" Foreground="White" Text="&#xE899;"/>
+                                <TextBlock Margin="15,0,0,0" Text="表情帖" Foreground="White" VerticalAlignment="Center"/>
                             </StackPanel>
                         </ListViewItem>
                     </ListView>
