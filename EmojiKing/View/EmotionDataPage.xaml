@@ -9,7 +9,19 @@
     mc:Ignorable="d">
 
     <Grid  CornerRadius="15" BorderThickness="1" Background="#42959595">
-        <chart:CartesianChart Name="myChart" Margin="5" >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="583*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Horizontal">
+            <TextBlock Text="年龄:"/>
+            <TextBlock Name="Age_TextBox"/>
+            <TextBlock Text="性别:"/>
+            <TextBlock Name="Gender_TextBox"/>
+            <TextBlock Text="描述:"/>
+            <TextBlock Name="Description_TextBox"/>
+        </StackPanel>
+        <chart:CartesianChart Name="myChart" Margin="5" Grid.Row="1">
             <chart:CartesianChart.Series>
                 <chart:ColumnSeries Name="Happiness" Title="开心指数" DataLabels="True" LabelsPosition="Top" />
                 <chart:ColumnSeries Name="Surprise" Title="惊讶指数" DataLabels="True" LabelsPosition="Top" />

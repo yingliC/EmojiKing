@@ -255,10 +255,11 @@ namespace EmojiKing.View
 
             double offset_canvas_x = (canvas_w - image_w) / 2;
             double offset_canvas_y = (canvas_h - image_h) / 2;
-            ;
 
+            int index = 0;  //为了上传对应的face数据
             foreach (var emotion in emotions)
             {
+                index++;
                 double offset_image_x = emotion.FaceRectangle.Left * p;
                 double offset_image_y = emotion.FaceRectangle.Top * p;
 
@@ -283,7 +284,9 @@ namespace EmojiKing.View
                         Sadness = emotion.Scores.Sadness,
                         Surprise = emotion.Scores.Surprise
                     };
-                    EmotionDataPage edc = new EmotionDataPage(data);
+                    if (index > faceDatas.Count)
+                        break;
+                    EmotionDataPage edc = new EmotionDataPage(data,faceDatas[index]);
                     edc.Width = MainCanvas.ActualWidth * 2 / 5;
                     edc.Height = MainCanvas.ActualHeight / 2;
                     EmotionPop.Child = edc;
