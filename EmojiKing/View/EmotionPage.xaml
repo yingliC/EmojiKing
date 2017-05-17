@@ -20,7 +20,6 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"/>
             <RowDefinition Height="25*"/>
-            <RowDefinition Height="12*"/>
             <RowDefinition Height="auto"/>
         </Grid.RowDefinitions>
         <Grid  Grid.Row="0">
@@ -65,12 +64,12 @@
             <Button Name="ImageSaveButton" Click="ImageSaveButton_Click" Style="{StaticResource NormalButton}"  Content="&#xE74E;" Width="64"/>
         </StackPanel>
         <ProgressRing Grid.Row="1"  Name="LoadingRing" Height="64" Width="64"/>
-        <Pivot Grid.Row="2">
+        <!--<Pivot Grid.Row="2">
             <PivotItem >
                 <PivotItem.Header>
                     <TextBlock FontSize="16" Text="人物描述"/>
                 </PivotItem.Header>
-                <ListView Name="FaceDataListView" ItemsSource="{x:Bind faceDatas}">
+                <ListView Name="FaceDataListView" ItemsSource="{x:Bind faceDatas}" Visibility="Collapsed">
                     <ListView.ItemTemplate>
                         <DataTemplate x:DataType="data:FaceData">
                             <Grid>
@@ -91,7 +90,7 @@
                     </ListView.ItemTemplate>
                 </ListView>
             </PivotItem>
-        </Pivot>
+        </Pivot>-->
         
     </Grid>
 </Page>

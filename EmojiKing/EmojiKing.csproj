@@ -115,6 +115,9 @@
     <Compile Include="View\EmotionPage.xaml.cs">
       <DependentUpon>EmotionPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\FaceStickersPage.xaml.cs">
+      <DependentUpon>FaceStickersPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\HomePage.xaml.cs">
       <DependentUpon>HomePage.xaml</DependentUpon>
     </Compile>
@@ -137,6 +140,7 @@
   <ItemGroup>
     <Content Include="Assets\Pics\add.png" />
     <Content Include="Assets\Pics\PK.png" />
+    <Content Include="Assets\Pics\sticker.png" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />
@@ -174,6 +178,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\EmotionPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\FaceStickersPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
