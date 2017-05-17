@@ -73,21 +73,18 @@
                             </StackPanel>
                         </ListViewItem>
                     </ListView>
-                    <ListView Grid.Row="1" SelectionMode="None"
-                              Name="SubListView" 
-                              SelectionChanged="SubListView_SelectionChanged"
-                              Background="#BF000000" >
-                        <ListViewItem Tag="Settings">
+                    <ListView Grid.Row="1" SelectionMode="None" IsItemClickEnabled="True" Name="SubListView" ItemClick="SubListView_ItemClick" Background="#BF000000" >
+                        <ListViewItem>
                             <ListViewItem.Content>
-                                <StackPanel Orientation="Horizontal">
+                                <StackPanel Orientation="Horizontal" Tag="Settings">
                                     <TextBlock FontFamily="Segoe MDL2 Assets" FontSize="25" Text="&#xE713;" Foreground="White"/>
                                     <TextBlock Margin="15,0,0,0" Text="设置" Foreground="White"/>
                                 </StackPanel>
                             </ListViewItem.Content>
                         </ListViewItem>
-                        <ListViewItem Tag="About">
+                        <ListViewItem>
                             <ListViewItem.Content>
-                                <StackPanel Orientation="Horizontal">
+                                <StackPanel Orientation="Horizontal" Tag="About">
                                     <TextBlock FontFamily="Segoe MDL2 Assets" FontSize="25" Text="&#xE783;" Foreground="White"/>
                                     <TextBlock Margin="15,0,0,0" Text="关于" Foreground="White"/>
                                 </StackPanel>
