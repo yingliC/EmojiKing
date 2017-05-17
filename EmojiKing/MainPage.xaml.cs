@@ -30,30 +30,37 @@ namespace EmojiKing
 
         private void MainListView_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            switch ((e.AddedItems[0] as ListViewItem).Tag.ToString())
-            {
-                case "MainPage": { MainFrame.Navigate(typeof(HomePage)); break; }
-                case "EmotionPage": { MainFrame.Navigate(typeof(EmotionPage)); break; }
-                case "PKEmojiPage": { MainFrame.Navigate(typeof(PKEmojiPage)); break; }
-                default:
-                    break;
-            }
+            //switch ((e.AddedItems[0] as ListViewItem).Tag.ToString())
+            //{
+            //    case "MainPage": { MainFrame.Navigate(typeof(HomePage)); break; }
+            //    case "EmotionPage": { MainFrame.Navigate(typeof(EmotionPage)); break; }
+            //    case "PKEmojiPage": { MainFrame.Navigate(typeof(PKEmojiPage)); break; }
+            //    default:
+            //        break;
+            //}
+            if (mainPage.IsSelected)
+                MainFrame.Navigate(typeof(HomePage));
+            else if (EmotionPage.IsSelected)
+                MainFrame.Navigate(typeof(EmotionPage));
+            else if (PKEmojiPage.IsSelected)
+                MainFrame.Navigate(typeof(PKEmojiPage));
+                
         }
 
         private void HumburgerButton_Click(object sender, RoutedEventArgs e)
         {
             MySplitView.IsPaneOpen = !MySplitView.IsPaneOpen;
         }
-        private void SubListView_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            switch ((e.AddedItems[0] as ListViewItem).Tag.ToString())
-            {
-                case "Settings": { MainFrame.Navigate(typeof(SettingsPage)); break; }
-                case "About": { MainFrame.Navigate(typeof(AboutPage)); break; }
-                default:
-                    break;
-            }
-        }
+        //private void SubListView_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        //{
+        //    switch ((e.AddedItems[0] as ListViewItem).Tag.ToString())
+        //    {
+        //        case "Settings": { MainFrame.Navigate(typeof(SettingsPage)); break; }
+        //        case "About": { MainFrame.Navigate(typeof(AboutPage)); break; }
+        //        default:
+        //            break;
+        //    }
+        //}
 
         private void BackButton_Click(object sender, RoutedEventArgs e)
         {
@@ -70,6 +77,20 @@ namespace EmojiKing
         public void ShowNotify(string message)
         {
             NotifyPopup.IsOpen = true;
+        }
+
+        private void SubListView_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            var item = e.ClickedItem as FrameworkElement;
+            switch(item.Tag.ToString())
+            {
+                case "Settings":
+                        MainFrame.Navigate(typeof(SettingsPage));
+                        break;
+                case "About":
+                        MainFrame.Navigate(typeof(AboutPage));
+                        break;
+            }
         }
     }
 }
