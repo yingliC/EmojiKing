@@ -142,13 +142,14 @@
     <Content Include="Assets\Pics\add.png" />
     <Content Include="Assets\Pics\PK.png" />
     <Content Include="Assets\Pics\sticker.png" />
-    <Content Include="Assets\Stickers\sticker1.jpg" />
-    <Content Include="Assets\Stickers\sticker2.jpg" />
-    <Content Include="Assets\Stickers\sticker3.jpg" />
-    <Content Include="Assets\Stickers\sticker4.jpg" />
-    <Content Include="Assets\Stickers\sticker6.jpg" />
-    <Content Include="Assets\Stickers\sticker5.jpg" />
-    <Content Include="Assets\Stickers\sticker7.jpg" />
+    <Content Include="Assets\Stickers\EyeStickers\sticker1.jpg" />
+    <Content Include="Assets\Stickers\HeadStickers\sticker1.jpg" />
+    <Content Include="Assets\Stickers\HeadStickers\sticker2.jpg" />
+    <Content Include="Assets\Stickers\HeadStickers\sticker3.jpg" />
+    <Content Include="Assets\Stickers\HeadStickers\sticker4.jpg" />
+    <Content Include="Assets\Stickers\HeadStickers\sticker6.jpg" />
+    <Content Include="Assets\Stickers\HeadStickers\sticker5.jpg" />
+    <Content Include="Assets\Stickers\HeadStickers\sticker7.jpg" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />
@@ -211,8 +212,6 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Assets\Stickers\EyeStickers\" />
-    <Folder Include="Assets\Stickers\HeadStickers\" />
     <Folder Include="Assets\Stickers\MouthStickers\" />
     <Folder Include="Assets\Stickers\NoseStickers\" />
     <Folder Include="Assets\Stickers\UserCustomStickers\" />

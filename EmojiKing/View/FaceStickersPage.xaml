@@ -5,8 +5,43 @@
     xmlns:local="using:EmojiKing.View"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:data="using:EmojiKing.Control"
     mc:Ignorable="d">
-
+    <Page.Resources>
+        <!--容器模板-->
+        <Style x:Key="HorizontalItemContainerStyle" TargetType="ListViewItem">
+            <Setter Property="MinWidth" Value="{StaticResource SplitViewCompactPaneThemeLength}"/>
+            <Setter Property="Padding" Value="0"/>
+            <Setter Property="UseSystemFocusVisuals" Value="True" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="ListViewItem">
+                        <ListViewItemPresenter ContentTransitions="{TemplateBinding ContentTransitions}"
+                        Control.IsTemplateFocusTarget="True"
+                        SelectionCheckMarkVisualEnabled="False"
+                        PointerOverBackground="{ThemeResource SystemControlHighlightListLowBrush}"
+                        PointerOverForeground="{ThemeResource ListViewItemForegroundPointerOver}"
+                        SelectedBackground="Transparent"
+                        SelectedForeground="{ThemeResource SystemControlForegroundAccentBrush}"
+                        SelectedPointerOverBackground="{ThemeResource SystemControlHighlightListLowBrush}"
+                        PressedBackground="{ThemeResource SystemControlHighlightListMediumBrush}"
+                        SelectedPressedBackground="{ThemeResource SystemControlHighlightListMediumBrush}"
+                        DisabledOpacity="{ThemeResource ListViewItemDisabledThemeOpacity}"
+                        HorizontalContentAlignment="Stretch"
+                        VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}"
+                        ContentMargin="{TemplateBinding Padding}"/>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <!--横向布局-->
+        <ItemsPanelTemplate x:Key="HorizontalItemsPanelTemplate">
+            <VirtualizingStackPanel Orientation="Horizontal"
+                VerticalAlignment="Top"
+                ScrollViewer.HorizontalScrollMode="Enabled"
+                ScrollViewer.VerticalScrollMode="Disabled"/>
+        </ItemsPanelTemplate>
+    </Page.Resources>
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Grid.RowDefinitions>
             <RowDefinition Height="4*"/>
@@ -14,36 +49,84 @@
         </Grid.RowDefinitions>
         <Pivot Grid.Row="1">
             <Pivot.Items>
+                <!--眼睛帖-->
+                <PivotItem>
+                    <PivotItem.Header>眼睛</PivotItem.Header>
+                    <PivotItem.Content>
+                        <ListView Name="EyeListView" 
+                                  ItemsSource="{x:Bind stickerList}"
+                                  ScrollViewer.HorizontalScrollMode="Enabled"
+                                  ScrollViewer.HorizontalScrollBarVisibility="Auto"
+                                  ScrollViewer.VerticalScrollMode="Disabled"
+                                  ItemContainerStyle="{StaticResource HorizontalItemContainerStyle}"
+                                  ItemsPanel="{StaticResource HorizontalItemsPanelTemplate}">
+                            <ListView.ItemTemplate>
+                                <DataTemplate x:DataType="data:StickerData">
+                                    <StackPanel>
+                                        <Image Source="{x:Bind imagePath}" Width="50"></Image>
+                                    </StackPanel>
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+                        </ListView>
+                    </PivotItem.Content>
+                </PivotItem>
+
+                <!--鼻子帖-->
+                <PivotItem>
+                    <PivotItem.Header>鼻子</PivotItem.Header>
+                    <PivotItem.Content>
+                        <ListView Name="NoseStickerView" ItemsSource="{Binding}">
+                            <ItemsPanelTemplate>
+                                <VirtualizingStackPanel Orientation="Horizontal" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Disabled"/>
+                            </ItemsPanelTemplate>
+                            <ListView.ItemTemplate>
+                                <DataTemplate>
+                                    <Image Source="{Binding imageName}"/>
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+
+                        </ListView>
+                    </PivotItem.Content>
+                </PivotItem>
+
+                <!--嘴巴帖-->
+                <PivotItem>
+                    <PivotItem.Header>嘴巴</PivotItem.Header>
+                    <PivotItem.Content>
+                        <GridView Name="stickerGrid">
+                            <GridView.ItemTemplate>
+                                <DataTemplate>
+                                    <ScrollViewer>
+                                        <StackPanel Orientation="Horizontal">
+                                            <Image Source="{Binding imageName}" Width="50"/>
+                                        </StackPanel>
+                                    </ScrollViewer>
+                                </DataTemplate>
+                            </GridView.ItemTemplate>
+                        </GridView>
+                    </PivotItem.Content>
+                </PivotItem>
+
+                
+                <!--头部帖-->
+                <PivotItem>
+                    <PivotItem.Header>头</PivotItem.Header>
+                    <PivotItem.Content>
+                        <ListView Name="HeadStickerView">
+
+                        </ListView>
+                    </PivotItem.Content>
+                </PivotItem>
+                
+                <!--用户自定义帖-->
                 <PivotItem>
                     <PivotItem.Header>表情帖</PivotItem.Header>
                     <PivotItem.Content>
-                        <ScrollViewer VerticalScrollBarVisibility="Disabled" HorizontalScrollBarVisibility="Auto">
-                            <StackPanel Orientation="Horizontal">
-                                <Image Source="/Assets/Stickers/sticker1.jpg" Width="50" Height="50" />
-                                <Image Source="/Assets/Stickers/sticker2.jpg" Width="50" Height="50" />
-                                <Image Source="/Assets/Stickers/sticker3.jpg" Width="50" Height="50" />
-                                <Image Source="/Assets/Stickers/sticker4.jpg" Width="50" Height="50" />
-                                <Image Source="/Assets/Stickers/sticker5.jpg" Width="50" Height="50" />
-                                <Image Source="/Assets/Stickers/sticker6.jpg" Width="50" Height="50" />
-                                <Image Source="/Assets/Stickers/sticker7.jpg" Width="50" Height="50" />
-                                <Image Source="/Assets/Stickers/sticker1.jpg" Width="50" Height="50" />
-                                <Image Source="/Assets/Stickers/sticker2.jpg" Width="50" Height="50" />
-                                <Image Source="/Assets/Stickers/sticker3.jpg" Width="50" Height="50" />
-                                <Image Source="/Assets/Stickers/sticker4.jpg" Width="50" Height="50" />
-                                <Image Source="/Assets/Stickers/sticker5.jpg" Width="50" Height="50" />
-                                <Image Source="/Assets/Stickers/sticker6.jpg" Width="50" Height="50" />
-                                <Image Source="/Assets/Stickers/sticker1.jpg" Width="50" Height="50" />
-                                <Image Source="/Assets/Stickers/sticker2.jpg" Width="50" Height="50" />
-                                <Image Source="/Assets/Stickers/sticker3.jpg" Width="50" Height="50" />
-                                <Image Source="/Assets/Stickers/sticker4.jpg" Width="50" Height="50" />
-                                <Image Source="/Assets/Stickers/sticker5.jpg" Width="50" Height="50" />
-                                <Image Source="/Assets/Stickers/sticker6.jpg" Width="50" Height="50" />
+                        <ListView Name="UserStickerView">
 
-                            </StackPanel>
-                        </ScrollViewer>
+                        </ListView>
                     </PivotItem.Content>
                 </PivotItem>
-               
             </Pivot.Items>
         </Pivot>
     </Grid>

@@ -1,5 +1,7 @@
-﻿using System;
+﻿using EmojiKing.Control;
+using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
@@ -22,9 +24,17 @@ namespace EmojiKing.View
     /// </summary>
     public sealed partial class FaceStickersPage : Page
     {
+        ObservableCollection<StickerData> stickerList=new ObservableCollection<StickerData>();
         public FaceStickersPage()
         {
             this.InitializeComponent();
+            this.DataContext = StickerData.GetStickerData();
+            stickerList.Add(new StickerData() { imagePath = "ms-appx:///Assets/Stickers/EyeStickers/sticker1.jpg" ,imageName="1001"});
+            //stickerList.Add(new StickerData() { imagePath = "ms-appx:///Assets/Stickers/EyeStickers/sticker1.jpg" });
+            //stickerList.Add(new StickerData() { imagePath = "ms-appx:///Assets/Stickers/EyeStickers/sticker1.jpg" });
+            //stickerList.Add(new StickerData() { imagePath = "ms-appx:///Assets/Stickers/EyeStickers/sticker1.jpg" });
+            //stickerList.Add(new StickerData() { imagePath = "ms-appx:///Assets/Stickers/EyeStickers/sticker1.jpg" });
+            //stickerList.Add(new StickerData() { imagePath = "ms-appx:///Assets/Stickers/EyeStickers/sticker1.jpg" });
         }
     }
 }
