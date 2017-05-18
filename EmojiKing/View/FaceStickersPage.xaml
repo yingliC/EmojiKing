@@ -17,7 +17,30 @@
                 <PivotItem>
                     <PivotItem.Header>表情帖</PivotItem.Header>
                     <PivotItem.Content>
-                        <StackPanel></StackPanel>
+                        <ScrollViewer VerticalScrollBarVisibility="Disabled" HorizontalScrollBarVisibility="Auto">
+                            <StackPanel Orientation="Horizontal">
+                                <Image Source="/Assets/Stickers/sticker1.jpg" Width="50" Height="50" />
+                                <Image Source="/Assets/Stickers/sticker2.jpg" Width="50" Height="50" />
+                                <Image Source="/Assets/Stickers/sticker3.jpg" Width="50" Height="50" />
+                                <Image Source="/Assets/Stickers/sticker4.jpg" Width="50" Height="50" />
+                                <Image Source="/Assets/Stickers/sticker5.jpg" Width="50" Height="50" />
+                                <Image Source="/Assets/Stickers/sticker6.jpg" Width="50" Height="50" />
+                                <Image Source="/Assets/Stickers/sticker7.jpg" Width="50" Height="50" />
+                                <Image Source="/Assets/Stickers/sticker1.jpg" Width="50" Height="50" />
+                                <Image Source="/Assets/Stickers/sticker2.jpg" Width="50" Height="50" />
+                                <Image Source="/Assets/Stickers/sticker3.jpg" Width="50" Height="50" />
+                                <Image Source="/Assets/Stickers/sticker4.jpg" Width="50" Height="50" />
+                                <Image Source="/Assets/Stickers/sticker5.jpg" Width="50" Height="50" />
+                                <Image Source="/Assets/Stickers/sticker6.jpg" Width="50" Height="50" />
+                                <Image Source="/Assets/Stickers/sticker1.jpg" Width="50" Height="50" />
+                                <Image Source="/Assets/Stickers/sticker2.jpg" Width="50" Height="50" />
+                                <Image Source="/Assets/Stickers/sticker3.jpg" Width="50" Height="50" />
+                                <Image Source="/Assets/Stickers/sticker4.jpg" Width="50" Height="50" />
+                                <Image Source="/Assets/Stickers/sticker5.jpg" Width="50" Height="50" />
+                                <Image Source="/Assets/Stickers/sticker6.jpg" Width="50" Height="50" />
+
+                            </StackPanel>
+                        </ScrollViewer>
                     </PivotItem.Content>
                 </PivotItem>
                

@@ -25732,14 +25732,14 @@
     "UAP,Version=v10.0": []
   },
   "packageFolders": {
-    "C:\\Users\\maomao\\.nuget\\packages\\": {}
+    "C:\\Users\\ZoraPea\\.nuget\\packages\\": {}
   },
   "project": {
     "restore": {
-      "projectUniqueName": "E:\\Github\\EmojiKing\\EmojiKing\\EmojiKing.csproj",
+      "projectUniqueName": "E:\\GitHub_repositories\\EmojiKing\\EmojiKing\\EmojiKing.csproj",
       "projectName": "EmojiKing",
-      "projectPath": "E:\\Github\\EmojiKing\\EmojiKing\\EmojiKing.csproj",
-      "projectJsonPath": "E:\\Github\\EmojiKing\\EmojiKing\\project.json",
+      "projectPath": "E:\\GitHub_repositories\\EmojiKing\\EmojiKing\\EmojiKing.csproj",
+      "projectJsonPath": "E:\\GitHub_repositories\\EmojiKing\\EmojiKing\\project.json",
       "projectStyle": "ProjectJson"
     },
     "dependencies": {

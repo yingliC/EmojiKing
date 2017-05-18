@@ -98,6 +98,7 @@
     </Compile>
     <Compile Include="Control\EmotionData.cs" />
     <Compile Include="Control\FaceData.cs" />
+    <Compile Include="Control\StickerData.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
@@ -141,6 +142,13 @@
     <Content Include="Assets\Pics\add.png" />
     <Content Include="Assets\Pics\PK.png" />
     <Content Include="Assets\Pics\sticker.png" />
+    <Content Include="Assets\Stickers\sticker1.jpg" />
+    <Content Include="Assets\Stickers\sticker2.jpg" />
+    <Content Include="Assets\Stickers\sticker3.jpg" />
+    <Content Include="Assets\Stickers\sticker4.jpg" />
+    <Content Include="Assets\Stickers\sticker6.jpg" />
+    <Content Include="Assets\Stickers\sticker5.jpg" />
+    <Content Include="Assets\Stickers\sticker7.jpg" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />
@@ -201,6 +209,14 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Assets\Stickers\EyeStickers\" />
+    <Folder Include="Assets\Stickers\HeadStickers\" />
+    <Folder Include="Assets\Stickers\MouthStickers\" />
+    <Folder Include="Assets\Stickers\NoseStickers\" />
+    <Folder Include="Assets\Stickers\UserCustomStickers\" />
+    <Folder Include="Themes\" />
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
